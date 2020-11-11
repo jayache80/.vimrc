@@ -36,7 +36,7 @@ if has("gui_running")
     " Make split buffers even widths (useful for after a window resize, etc.)
     " C-s is terminal specific signalling mechanism, so only works on gui
     map <C-s> <C-W>=
-    if has("macvim")
+    if has("gui_macvim")
         set guifont=menlo
     else 
         " is gvim
