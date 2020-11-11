@@ -16,6 +16,7 @@ set smarttab
 set cmdheight=2
 set noerrorbells
 set novisualbell
+set wildmenu
 
 " Get rid of annoying bell on esc, end of scroll, etc.
 set noerrorbells visualbell t_vb=
@@ -153,4 +154,10 @@ nnoremap <leader>sa :vert sba<cr>
 
 " open a definition as a new vertical split (ctags)
 map <A-]> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
+
+" render syntax for .ebs files as Visual Basic script
+au BufNewFile,BufRead *.ebs set filetype=vb
+
+" make wherever netrw Explorer is the current directory
+let g:netrw_keepdir=0
 
