@@ -234,3 +234,5 @@ set splitbelow
 " Don't lose column position with paging up/down
 set nostartofline
 
+" <leader> sp to toggle paste mode
+map <leader>sp :set paste!<cr>
