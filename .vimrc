@@ -130,3 +130,8 @@ map <leader>o <Esc> <C-w>vgf
 " open netrw file explorer in vertical split
 nnoremap <leader>x :Vex<cr>
 
+" when saving a session with :mksession mysession.vim, don't write your .vimrc
+" options into the mysession.vim file. Those should always come from, well,
+" your .vimrc
+set sessionoptions-=options
+
