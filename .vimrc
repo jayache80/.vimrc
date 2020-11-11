@@ -92,7 +92,7 @@ let g:netrw_browse_split = 2
 " netrw defaults <C-l> to refresh the explorer file list. Re-map this function
 " ahead of time to something else so we can use <C-l> for something cooler
 " like switching windows
-nmap <unique> <leader>nr <Plug>NetrwRefresh
+nmap <leader>nr <Plug>NetrwRefresh
 
 " C-<h, j, k, l> to switch windows
 map <C-h> <C-w>h
@@ -214,4 +214,17 @@ map [[ [[zz
 map ]] ]]zz
 map [] []zz
 map ][ ][zz
+
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+
+" make new splits (with :vnew and :new) be created to the right and below,
+" respectively
+set splitright
+set splitbelow
 
