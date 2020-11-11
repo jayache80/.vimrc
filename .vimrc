@@ -135,3 +135,5 @@ nnoremap <leader>x :Vex<cr>
 " your .vimrc
 set sessionoptions-=options
 
+" show all buffers and split them vertically
+nnoremap <leader>sa :vert sba<cr>
