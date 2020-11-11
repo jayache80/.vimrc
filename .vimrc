@@ -37,6 +37,11 @@ if !exists("g:os")
     endif
 endif
 
+" Override jellybeans background color to be none
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none', 'guibg': 'none' },
+\}
+
 if has("gui_running")
     colorscheme jellybeans
     set guioptions-=m  "remove menu bar
