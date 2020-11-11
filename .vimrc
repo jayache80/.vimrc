@@ -161,3 +161,19 @@ au BufNewFile,BufRead *.ebs set filetype=vb
 " make wherever netrw Explorer is the current directory
 let g:netrw_keepdir=0
 
+" Look for tags file in the directory of current file, then work your way up
+" until you find the tags file
+set tags=./tags;,tags;
+
+" Fold functions using syntax (as opposed to indent) on <leader>f
+map <leader>f :set foldmethod=syntax<cr>
+" No nested folding...
+set foldnestmax=1
+" Dont fold comment blocks
+let c_no_comment_fold=1
+
+" Decrease vertical buffer width from the right
+map <A-h> <C-w><
+" Increase vertical buffer width to the right
+map <A-l> <C-w>>
+
