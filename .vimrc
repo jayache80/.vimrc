@@ -33,10 +33,12 @@ if has("gui_running")
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
+    " Start gui window maximized
+    au GUIEnter * simalt ~x    
     " Make split buffers even widths (useful for after a window resize, etc.)
     " C-s is terminal specific signalling mechanism, so only works on gui
     map <C-s> <C-W>=
-    if has("gui_macvim")
+    if has("macvim")
         set guifont=menlo
     else 
         " is gvim
@@ -44,13 +46,9 @@ if has("gui_running")
         " F11 for fullscreen mode. gvimfullscreen.dll must be where gvim.exe is. 
         " Provided by Derek McLoughlin http://www.vim.org/scripts/script.php?script_id=2596
         map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
-        " Start gui window maximized (gvim only)
-        au GUIEnter * simalt ~x    
     endif
 else
     " is terminal
-    " enable 256 colors
-    set t_Co=256
     colorscheme desert256
 endif
 
@@ -94,6 +92,8 @@ map <leader>tm :tabmove<cr>
 map <leader>te :tabedit <c-r>=expand("%:ph")<cr>/
 " move existing buffer to new tab
 map <leader>tb <C-w>T
+" copy existing buffer to new tab
+map <leader>tb :tabnew %<cr>
 
 " when I close a tab, remove the buffer
 set nohidden
@@ -125,7 +125,7 @@ map N Nzz
 map n nzz
 
 " open file under cursor
-map <leader>o <Esc> <C-w>gf
+map <leader>o <Esc> <C-w>vgf
 
 " open netrw file explorer in vertical split
 nnoremap <leader>x :Vex<cr>
