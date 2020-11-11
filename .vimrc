@@ -33,8 +33,6 @@ if has("gui_running")
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
     set guioptions-=L  "remove left-hand scroll bar
-    " Start gui window maximized
-    au GUIEnter * simalt ~x    
     " Make split buffers even widths (useful for after a window resize, etc.)
     " C-s is terminal specific signalling mechanism, so only works on gui
     map <C-s> <C-W>=
@@ -42,6 +40,8 @@ if has("gui_running")
         set guifont=menlo
     else 
         " is gvim
+        " Start gui window maximized
+        au GUIEnter * simalt ~x    
         set guifont=consolas
         " F11 for fullscreen mode. gvimfullscreen.dll must be where gvim.exe is. 
         " Provided by Derek McLoughlin http://www.vim.org/scripts/script.php?script_id=2596
@@ -49,7 +49,7 @@ if has("gui_running")
     endif
 else
     " is terminal
-    colorscheme desert256
+    colorscheme default
 endif
 
 " intelligent indent based on file extension
