@@ -52,6 +52,7 @@ if has("gui_running")
         " Start gui window maximized
         au GUIEnter * simalt ~x    
         set guifont=consolas
+        let &runtimepath.=',$HOME/vimfiles'
         " F11 for fullscreen mode. gvimfullscreen.dll must be where gvim.exe is. 
         " Provided by Derek McLoughlin http://www.vim.org/scripts/script.php?script_id=2596
         map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
@@ -149,3 +150,7 @@ set sessionoptions-=options
 
 " show all buffers and split them vertically
 nnoremap <leader>sa :vert sba<cr>
+
+" open a definition as a new vertical split (ctags)
+map <A-]> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
+
