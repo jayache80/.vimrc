@@ -220,9 +220,11 @@ map ][ ][zz
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
-" replace currently selected text with default register
-" without yanking it
+" replace currently selected text with default register without yanking it
 vnoremap <leader>p "_dP
+
+" Eliminate delay when pressing escape
+set timeoutlen=1000 ttimeoutlen=0
 
 " make new splits (with :vnew and :new) be created to the right and below,
 " respectively
