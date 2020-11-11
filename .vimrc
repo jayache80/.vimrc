@@ -128,7 +128,11 @@ vmap <M-k> :m'>-2<cr>`<my`>mzgv`yo`z
 nmap <leader>j mz:m+<cr>`z
 nmap <leader>k mz:m-2<cr>`z
 
-set mouse=a " Enable mouse support in console
+" Enable mouse support in console
+set mouse=a
+
+" Enable mouse support in tmux
+set ttymouse=xterm2
 
 " quick write
 nnoremap <silent> <leader>w :w<cr>
