@@ -216,6 +216,10 @@ map ]] ]]zz
 map [] []zz
 map ][ ][zz
 
+" When jumping to diffs, center them on the screen
+map ]c ]czz
+map [c [czz
+
 " delete without yanking
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
