@@ -248,3 +248,7 @@ map <leader>sp :set paste!<cr>
 " send last yanked text to the system yank command
 map <leader>sy :call system("yank", @")<cr>
 
+" Don't automatically add an EOL character to the end of a file if it's
+" missing one. Leave no trace, man.
+set nofixendofline
+
