@@ -159,7 +159,7 @@ map <A-]> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
 au BufNewFile,BufRead *.ebs set filetype=vb
 
 " make wherever netrw Explorer is the current directory
-let g:netrw_keepdir=0
+" let g:netrw_keepdir=0
 
 " Look for tags file in the directory of current file, then work your way up
 " until you find the tags file
@@ -176,4 +176,10 @@ let c_no_comment_fold=1
 map <A-h> <C-w><
 " Increase vertical buffer width to the right
 map <A-l> <C-w>>
+
+" When jumping to functions, center them on the screen
+map [[ [[zz
+map ]] ]]zz
+map [] []zz
+map ][ ][zz
 
