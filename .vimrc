@@ -60,8 +60,12 @@ if has("gui_running")
     endif
 else
     " is terminal
-        if g:os =~ "Linux" || g:os =~ "MSYS_NT" || g:os =~ "MINGW64_NT" || g:os =~ "CYGWIN_NT"
+    if g:os =~ "Linux" || g:os =~ "MSYS_NT" || g:os =~ "MINGW64_NT" || g:os =~ "CYGWIN_NT"
         set t_Co=256
+        colorscheme jellybeans
+    else
+        " is windows cmd
+        set termguicolors
         colorscheme jellybeans
     endif
 endif
