@@ -160,6 +160,10 @@ nnoremap <leader>sa :vert sba<cr>
 " open a definition as a new vertical split (ctags)
 map <A-]> :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
 
+" open a definition as a new vertical split (ctags) without alt (meta) key for
+" terminals
+map <leader>] :vsp <cr>:exec("tag ".expand("<cword>"))<cr>
+
 " render syntax for .ebs files as Visual Basic script
 au BufNewFile,BufRead *.ebs set filetype=vb
 
@@ -181,6 +185,11 @@ let c_no_comment_fold=1
 map <A-h> <C-w><
 " Increase vertical buffer width to the right
 map <A-l> <C-w>>
+
+" Decrease vertical buffer width from the right (terminal version)
+map <leader>h <C-w><
+" Increase vertical buffer width to the right (terminal version)
+map <leader>l <C-w>>
 
 " When jumping to functions, center them on the screen
 map [[ [[zz
