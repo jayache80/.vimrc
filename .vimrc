@@ -60,7 +60,7 @@ if has("gui_running")
     endif
 else
     " is terminal
-    if g:os == "Linux"
+    if g:os == "Linux" || g:os == "MSYS_NT-10.0"
         set t_Co=256
         colorscheme jellybeans
     endif
