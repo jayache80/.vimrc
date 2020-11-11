@@ -93,7 +93,7 @@ map <leader>te :tabedit <c-r>=expand("%:ph")<cr>/
 " move existing buffer to new tab
 map <leader>tb <C-w>T
 " copy existing buffer to new tab
-map <leader>tb :tabnew %<cr>
+map <leader>tp :tabnew %<cr>
 
 " when I close a tab, remove the buffer
 set nohidden
