@@ -240,3 +240,7 @@ set nostartofline
 
 " <leader> sp to toggle paste mode
 map <leader>sp :set paste!<cr>
+
+" send last yanked text to the system yank command
+map <leader>sy :call system("yank", @")<cr>
+
