@@ -27,6 +27,15 @@ endif
 let mapleader = ","
 let g:mapleader = ","
 
+" detect operating system
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
 if has("gui_running")
     colorscheme jellybeans
     set guioptions-=m  "remove menu bar
@@ -49,7 +58,10 @@ if has("gui_running")
     endif
 else
     " is terminal
-    colorscheme default
+    if g:os == "Linux"
+        set t_Co=256
+        colorscheme jellybeans
+    endif
 endif
 
 " intelligent indent based on file extension
