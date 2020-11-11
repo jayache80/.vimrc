@@ -252,3 +252,7 @@ map <leader>sy :call system("yank", @")<cr>
 " missing one. Leave no trace, man.
 set nofixendofline
 
+" Show trailing whitespace, toggleable with <leader> sw
+highlight Specialkey guibg=red ctermbg=red
+set listchars=trail:·
+map <leader>sw :set list!<cr>
