@@ -54,13 +54,10 @@ if has("gui_running")
         au GUIEnter * simalt ~x    
         set guifont=consolas
         let &runtimepath.=',$HOME/vimfiles'
-        " F11 for fullscreen mode. gvimfullscreen.dll must be where gvim.exe is. 
-        " Provided by Derek McLoughlin http://www.vim.org/scripts/script.php?script_id=2596
-        map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
     endif
 else
-    " is terminal
-    if g:os =~ "Linux" || g:os =~ "MSYS_NT" || g:os =~ "MINGW64_NT" || g:os =~ "CYGWIN_NT"
+    if g:os =~ "Linux" || g:os =~ "MSYS_NT" || g:os =~ "MINGW64_NT" || g:os =~ "CYGWIN_NT" || g:os =~ "Darwin"
+        " is terminal
         set t_Co=256
         colorscheme jellybeans
     else
@@ -231,4 +228,7 @@ vnoremap <leader>p "_dP
 " respectively
 set splitright
 set splitbelow
+
+" Don't lose column position with paging up/down
+set nostartofline
 
