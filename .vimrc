@@ -49,6 +49,8 @@ if has("gui_running")
     endif
 else
     " is terminal
+    " enable 256 colors
+    set t_Co=256
     colorscheme desert256
 endif
 
