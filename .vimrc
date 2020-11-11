@@ -123,6 +123,10 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'>-2<cr>`<my`>mzgv`yo`z
 
+" move a line of text using terminal compatible <leader>[jk]
+nmap <leader>j mz:m+<cr>`z
+nmap <leader>k mz:m-2<cr>`z
+
 set mouse=a " Enable mouse support in console
 
 " quick write
