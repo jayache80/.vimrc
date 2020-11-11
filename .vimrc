@@ -149,14 +149,20 @@ map n nzz
 
 " open file under cursor
 map <leader>o <Esc> <C-w>vgf
+" search for files recursively
+set path+=../**
 
 " open netrw file explorer in vertical split
 nnoremap <leader>x :Vex<cr>
+" open netrw file explorer in current window
+nnoremap <leader>ee :Ex<cr>
 
 " when saving a session with :mksession mysession.vim, don't write your .vimrc
 " options into the mysession.vim file. Those should always come from, well,
 " your .vimrc
 set sessionoptions-=options
+" use relative paths when creating session file
+set sessionoptions=sesdir
 
 " show all buffers and split them vertically
 nnoremap <leader>sa :vert sba<cr>
@@ -177,6 +183,14 @@ au BufNewFile,BufRead *.ebs set filetype=vb
 " Look for tags file in the directory of current file, then work your way up
 " until you find the tags file
 set tags=./tags;,tags;
+
+" vim defaults with complete set to ., w, b, u, t, i, meaning current buffer,
+" buffers in other windows, other buffers, unloaded buffers, tags, and
+" included files
+" Have auto-complete not include the (potentially massive) tags file, nor
+" include (header) files
+set complete-=t
+set complete-=i
 
 " Fold functions using syntax (as opposed to indent) on <leader>f
 map <leader>f :set foldmethod=syntax<cr>
