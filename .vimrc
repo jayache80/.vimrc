@@ -261,3 +261,9 @@ set nofixendofline
 highlight Specialkey guibg=red ctermbg=red
 set listchars=trail:·
 map <leader>sw :set list!<cr>
+
+" Provide a max text width that gets used in autowrapping with gq
+set textwidth=79
+
+" Don't autowrap as you're typing though
+set formatoptions-=t
