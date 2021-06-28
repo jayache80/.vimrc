@@ -163,7 +163,7 @@ map <leader>o <Esc> <C-w>vgf
 set path+=../**
 
 " open netrw file explorer in vertical split
-nnoremap <leader>x :Vex<cr>
+nnoremap <leader>x :Lex<cr>
 " open netrw file explorer in current window
 nnoremap <leader>ee :Ex<cr>
 
