@@ -57,7 +57,7 @@ if has("gui_running")
         " is gvim
         " Start gui window maximized
         au GUIEnter * simalt ~x    
-        set guifont=consolas
+        set guifont=consolas:h14
         let &runtimepath.=',$HOME/vimfiles'
     endif
 else
