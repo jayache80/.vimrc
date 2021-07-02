@@ -85,8 +85,8 @@ set expandtab
 set noincsearch
 " highlight search results
 set hlsearch
-" Ctrl+a to clear the highlighting after a search
-map <C-a> :noh<cr>
+" clear the highlighting after a search
+map <leader>a :noh<cr>
 " set off the other paren
 highlight MatchParen ctermbg=2
 
@@ -107,7 +107,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " swap current buffer with the one to the right
-map <C-x> <C-w>x
+map <leader>ss <C-w>x
 
 " managing tabs
 map <leader>tn :tabnew<cr>
